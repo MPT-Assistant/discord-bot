@@ -8,6 +8,4 @@ const client = new Discord.Client({
 	],
 });
 
-(async function () {
-	await client.login();
-});
+export default client;
