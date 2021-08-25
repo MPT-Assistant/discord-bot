@@ -11,7 +11,7 @@ new TextCommand(/^(?:профиль|проф)$/i, async (message) => {
 			.setStyle(message.state.user.inform ? "DANGER" : "SUCCESS"),
 	);
 	return await message.reply({
-		content: `Ваш профиль:
+		content: `${message.author.username}, Ваш профиль:
 ID: ${message.state.user.id}
 Группа: ${message.state.user.group || "Не установлена"}
 Информирование о заменах: ${
