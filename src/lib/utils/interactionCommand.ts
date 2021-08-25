@@ -1,17 +1,23 @@
-import { Interaction } from "discord.js";
+import { CommandInteraction as CommandInteractionInterface } from "discord.js";
+import IExtendCommandInteraction from "../types/IExtendCommandInteraction";
 
 import internalUtils from "./core";
 
-type TextCommandProcess = (message: Interaction) => Promise<unknown> | unknown;
+type CommandInteractionProcess = (
+	message: CommandInteractionInterface & IExtendCommandInteraction,
+) => Promise<unknown> | unknown;
 
-class TextCommand {
-	constructor(public interaction: string, public process: TextCommandProcess) {
+class CommandInteraction {
+	constructor(
+		public string: string,
+		public process: CommandInteractionProcess,
+	) {
 		internalUtils.interactionCommands.push(this);
 	}
 
 	public check(input: string): boolean {
-		return this.interaction === input;
+		return this.string === input;
 	}
 }
 
-export default TextCommand;
+export default CommandInteraction;
