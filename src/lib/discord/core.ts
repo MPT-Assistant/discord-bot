@@ -7,5 +7,8 @@ const client = new Discord.Client({
 });
 
 client.on("messageCreate", messageMiddleware);
+client.on("interactionCreate", (interaction) => {
+	console.log(interaction);
+});
 
 export default client;
