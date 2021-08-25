@@ -1,1 +1,1 @@
-import "./text/ping";
+import "./text/utils/profile";
