@@ -23,7 +23,9 @@ class Utils {
 				reg_date: new Date(),
 			});
 			await data.save();
-			this.sendLog(`Зарегистрирован новый пользователь\nID: ${id}`);
+			this.sendLog(
+				`Зарегистрирован новый пользователь\nhttps://discordapp.com/users/${id}`,
+			);
 		}
 		return data;
 	}

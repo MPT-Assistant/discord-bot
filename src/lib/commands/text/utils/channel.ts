@@ -15,7 +15,7 @@ new TextCommand(/^(?:канал)$/i, async (message) => {
 			.setStyle(message.state.channel.inform ? "DANGER" : "SUCCESS"),
 	);
 	return await message.reply({
-		content: `${message.author.username}, профиль канала:
+		content: `Профиль канала:
 ID: ${message.state.channel.id}
 Группа: ${message.state.channel.group || "Не установлена"}
 Информирование о заменах: ${

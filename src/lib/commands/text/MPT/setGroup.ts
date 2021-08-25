@@ -6,7 +6,7 @@ import TextCommand from "../../../utils/textCommand";
 import internalUtils from "../../../utils/core";
 
 new TextCommand(
-	/(?:установить группу|уг)(?:\s(.*))?$/i,
+	/^(?:установить группу|уг)(?:\s(.*))?$/i,
 	async function SetGroupCommand(message) {
 		if (!message.state.args[1]) {
 			return await message.reply("укажите название группы");
