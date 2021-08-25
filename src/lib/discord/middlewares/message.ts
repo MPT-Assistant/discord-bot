@@ -1,5 +1,5 @@
 import { Message } from "discord.js";
-import IExtendMessage from "../../types/IExtendMessage";
+import { IExtendMessage } from "../../types/events";
 
 import internalUtils from "../../utils/core";
 

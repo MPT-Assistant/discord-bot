@@ -9,3 +9,5 @@ import "./text/MPT/replacements";
 import "./text/MPT/regChannel";
 
 import "./interactions/commands/lessons";
+
+import "./interactions/buttons/lessons";

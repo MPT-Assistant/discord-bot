@@ -3,11 +3,13 @@ import DB from "../DB/core";
 
 import TextCommand from "./textCommand";
 import InteractionCommand from "./interactionCommand";
+import ButtonCommand from "./buttonCommand";
 
 import MPT from "./lib/mpt";
 
 class Utils {
 	public textCommands: TextCommand[] = [];
+	public buttonCommands: ButtonCommand[] = [];
 	public interactionCommands: InteractionCommand[] = [];
 
 	public mpt = new MPT();

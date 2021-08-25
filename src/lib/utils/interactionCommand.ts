@@ -1,5 +1,5 @@
 import { CommandInteraction as CommandInteractionInterface } from "discord.js";
-import IExtendCommandInteraction from "../types/IExtendCommandInteraction";
+import {IExtendCommandInteraction} from "../types/events";
 
 import internalUtils from "./core";
 
