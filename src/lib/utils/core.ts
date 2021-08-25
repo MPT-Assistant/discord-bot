@@ -2,9 +2,12 @@ import discord from "../discord/core";
 import DB from "../DB/core";
 
 import TextCommand from "./textCommand";
+import MPT from "./lib/mpt";
 
 class Utils {
 	public textCommands: TextCommand[] = [];
+
+	public mpt = new MPT();
 
 	public async getUserInfo(id: string) {
 		let data = await DB.bot.models.user.findOne({
