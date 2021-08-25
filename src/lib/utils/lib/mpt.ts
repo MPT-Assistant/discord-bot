@@ -309,11 +309,11 @@ export default class MPT {
 				new MessageButton()
 					.setCustomId(command + "_yesterday")
 					.setLabel("Вчера")
-					.setStyle("SECONDARY"),
+					.setStyle("DANGER"),
 				new MessageButton()
 					.setCustomId(command + "_tomorrow")
 					.setLabel("Завтра")
-					.setStyle("SECONDARY"),
+					.setStyle("SUCCESS"),
 			]),
 		);
 

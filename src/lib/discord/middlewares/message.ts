@@ -21,7 +21,9 @@ async function messageMiddleware(message: Message): Promise<void> {
 			channel: await internalUtils.getChannelInfo(message.channelId),
 		};
 
-		command.process(message as Message & IExtendMessage);
+		await command.process(message as Message & IExtendMessage);
+		await (message as Message & IExtendMessage).state.user.save();
+		await (message as Message & IExtendMessage).state.channel.save();
 	}
 }
 

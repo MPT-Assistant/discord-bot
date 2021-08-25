@@ -4,3 +4,4 @@ import "./text/utils/help";
 import "./text/utils/mailing";
 
 import "./text/MPT/setGroup";
+import "./text/MPT/lessons";
