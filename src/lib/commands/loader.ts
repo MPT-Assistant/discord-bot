@@ -9,5 +9,6 @@ import "./text/MPT/replacements";
 import "./text/MPT/regChannel";
 
 import "./interactions/commands/lessons";
+import "./interactions/commands/setGroup";
 
 import "./interactions/buttons/lessons";
