@@ -5,3 +5,4 @@ import "./text/utils/mailing";
 
 import "./text/MPT/setGroup";
 import "./text/MPT/lessons";
+import "./text/MPT/replacements";
