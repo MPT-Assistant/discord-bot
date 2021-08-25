@@ -1,7 +1,11 @@
 import discord from "../discord/core";
 import DB from "../DB/core";
 
+import TextCommand from "./textCommand";
+
 class Utils {
+	public textCommands: TextCommand[] = [];
+
 	public async getUserInfo(id: string) {
 		let data = await DB.bot.models.user.findOne({
 			id,
