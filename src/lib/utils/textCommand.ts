@@ -1,10 +1,10 @@
 import { Message } from "discord.js";
-import { IState } from "../types/state";
+import IExtendMessage from "../types/IExtendMessage";
 
 import internalUtils from "./core";
 
 type TextCommandProcess = (
-	message: Message & IState,
+	message: Message & IExtendMessage,
 ) => Promise<unknown> | unknown;
 
 class TextCommand {
