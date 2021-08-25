@@ -12,3 +12,4 @@ import "./interactions/commands/lessons";
 import "./interactions/commands/setGroup";
 
 import "./interactions/buttons/lessons";
+import "./interactions/buttons/setGroup";
