@@ -8,11 +8,20 @@ class Hint extends SlashCommandBuilder {
 	}
 }
 
-const commands = [
-	new Hint({
-		name: "расписание",
-		description: "Показывает расписание на выбранный день",
-	}),
-].map((command) => command.toJSON());
+const schedule = new Hint({
+	name: "расписание",
+	description: "Показывает расписание на выбранный день",
+});
+
+schedule.addStringOption((option) => {
+	option.setName("день");
+	option.setDescription(
+		"День на который требуется расписание, формат: DD.MM.YYYY",
+	);
+	option.setRequired(false);
+	return option;
+});
+
+const commands = [schedule].map((command) => command.toJSON());
 
 export default commands;
