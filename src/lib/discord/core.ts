@@ -1,5 +1,7 @@
 import Discord from "discord.js";
 
+import messageMiddleware from "./middlewares/message";
+
 const client = new Discord.Client({
 	intents: [
 		Discord.Intents.FLAGS.GUILDS,
@@ -7,5 +9,7 @@ const client = new Discord.Client({
 		Discord.Intents.FLAGS.DIRECT_MESSAGES,
 	],
 });
+
+client.on("messageCreate", messageMiddleware);
 
 export default client;

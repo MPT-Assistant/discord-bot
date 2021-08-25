@@ -77,7 +77,7 @@ class Bot_DB extends DB {
 			this.connection,
 		),
 
-		chat: typedModel(
+		channel: typedModel(
 			"chat",
 			schemes.channelSchema,
 			"chats",
