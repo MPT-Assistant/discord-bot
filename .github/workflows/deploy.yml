@@ -34,6 +34,8 @@ jobs:
             cd /root/Bots/discord-bot
             rm -rf ./node_modules/
             rm -rf ./dist/
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
             npm install --legacy-peer-deps
             npm run build
       - name: Start
@@ -46,6 +48,8 @@ jobs:
           script_stop: true
           script: |
             cd /root/Bots/discord-bot
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
             pm2 stop ./dist/main.js > /dev/null
             pm2 start ./dist/main.js --name="DiscordBot" > /dev/null
       - name: Final
