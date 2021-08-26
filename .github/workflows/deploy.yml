@@ -50,7 +50,7 @@ jobs:
             cd /root/Bots/discord-bot
             export NVM_DIR=~/.nvm
             source ~/.nvm/nvm.sh
-            pm2 stop ./dist/main.js -s
-            pm2 start ./dist/main.js --name="DiscordBot" -s
+            pm2 stop ./dist/main.js -s || true
+            pm2 start ./dist/main.js --name="DiscordBot" -s || true
       - name: Final
         run: echo "Succesfully deployed"
